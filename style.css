@@ -80,7 +80,7 @@ body {
     mobile-menu li {
         margin-left: 0;
         opacity: 0;
-        ;
+        
     }
 
      .mobile-menu {
@@ -131,7 +131,7 @@ body {
     color:rgba(0, 0, 0, 0.836);
 }
 
-h2::after{
+h4::after{
     content: '';
     width: 100%;
     max-width: 600px;
