@@ -1,3 +1,5 @@
+
+
 class MobileNavBar {
     constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
@@ -64,4 +66,7 @@ ScrollReveal().reveal('.welcome', {
     duration: 2000,
     distance: '100%'
 });
+
+ 
+
 
