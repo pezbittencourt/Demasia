@@ -67,6 +67,11 @@ ScrollReveal().reveal('.welcome', {
     distance: '100%'
 });
 
+ScrollReveal().reveal('.contato', {
+    origin: 'left',
+    duration: 2000,
+    distance: '100%'
+});
  
 
 

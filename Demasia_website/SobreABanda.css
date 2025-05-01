@@ -33,6 +33,8 @@ body {
     background-color:#e1e1e1;
     background-size: cover;
     width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 .nav-list {
@@ -132,14 +134,14 @@ animation: fadeIn 0.8s ease-in-out;
     justify-content: center;
     align-items: center;
     position:relative;
-    top: -45px;
+    top: -80px;
     font-size: 15px;
     color: black;
     padding: 10px;
     animation: fadeIn 1.5s ease-in-out;
     width: 80%;
-    margin-left: 10%;
-    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
@@ -147,6 +149,8 @@ animation: fadeIn 0.8s ease-in-out;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estilo do contêiner dos cards */
@@ -154,6 +158,8 @@ animation: fadeIn 0.8s ease-in-out;
     display: flex;
     gap: 20px; /* Espaçamento entre os cards */
     flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estilo dos cards */
@@ -166,6 +172,8 @@ animation: fadeIn 0.8s ease-in-out;
     width: 300px; /* Largura fixa dos cards */
     text-align: center; /* Centraliza o texto */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao passar o mouse */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Efeito hover nos cards */
@@ -179,4 +187,41 @@ animation: fadeIn 0.8s ease-in-out;
     font-size: 16px;
     color: #333; /* Cor do texto */
     margin: 0;
+    
+}
+
+
+
+.footer { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    color: #000000;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer img { 
+justify-content: center;
+align-items: center;
+
+}
+
+.footer-logos { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaçamento entre os logos */
+    margin-top: 10px; /* Espaçamento acima dos logos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos logos */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -33,6 +33,7 @@ body {
     background-color: #e1e1e1;;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .nav-list {
@@ -120,12 +121,15 @@ body {
 }
 
 .welcome {
-    width: 80%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 2rem;
-    margin-left: 2rem;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1rem;
+    font-weight: 700;
     letter-spacing: 0.1rem;
     font-family: "Raleway", sans-serif;;
     color:rgba(0, 0, 0, 0.836);
@@ -184,4 +188,77 @@ button{
 }
 button:hover {
 transform: scale(0.95);
+}
+
+
+
+.footer { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    color: #000000;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: -10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer img { 
+justify-content: center;
+align-items: center;
+
+}
+
+.footer-logos { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre os logos */
+    margin-top: 10px; /* Espaçamento acima dos logos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos logos */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.integrantes{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+}
+
+.integrantes-img{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+.integrantes-img img{ 
+    
+    width: 250px;;
+    height: 350px;
+    border-radius: 10%;
+    
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra interna e externa */
+    
+}
+
+.integrantes-img img:hover { 
+    transform: scale(1.02); /* Aumenta a imagem ao passar o mouse */
+    transition: transform 0.3s ease; /* Animação suave */
 }

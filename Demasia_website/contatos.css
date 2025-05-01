@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -29,8 +30,10 @@ nav {
 }
 
 body {
-    background-color: #e1e1e1;
-    background-size: cover;
+    background-color: #e1e1e1;;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 .nav-list {
@@ -50,12 +53,12 @@ body {
 
 .mobile-menu div {
     width: 32px;
-    height: 2px;
+    height: 3px;
     background: #ffffff;
     margin: 8px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
@@ -64,7 +67,7 @@ body {
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 50vw;
+        width: 35vw;
         height: 85vh;
         background: #000000;
         opacity: 0.8;
@@ -78,10 +81,10 @@ body {
     mobile-menu li {
         margin-left: 0;
         opacity: 0;
-        ;
+        
     }
 
-    .mobile-menu {
+     .mobile-menu {
         display: block;
     }
 }
@@ -102,6 +105,138 @@ body {
 
 }
 
+
 h1 { 
     color: white;
+}
+
+
+
+
+
+.footer { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    color: #000000;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: -10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer img { 
+justify-content: center;
+align-items: center;
+
+}
+
+.footer-logos { 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre os logos */
+    margin-top: 10px; /* Espaçamento acima dos logos */
+    margin-bottom: 15px; /* Espaçamento abaixo dos logos */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contatos img {
+    width: 100px; /* Largura dos logos */
+    height: auto; /* Altura automática para manter a proporção */
+    margin: 0 10px; /* Espaçamento entre os logos */
+
+}
+
+.contato { 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration:underline;
+}
+
+.instagram { 
+    display: flex;
+    
+
+}
+
+.instagram h1 { 
+    margin-top: 2rem;
+    color: black;
+}
+
+.instagram a { 
+    margin-top: 2rem;
+    color: black;
+    text-decoration: underline;
+}
+
+.facebook { 
+    display: flex;
+    margin-top: 2rem;
+
+}
+
+.facebook h1 { 
+    margin-top: 2rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.facebook a { 
+    margin-top: 2rem;
+    color: black;
+    margin-left: 1rem;
+    text-decoration: underline;
+}
+
+.facebook  { 
+    margin-top: 1rem;
+    color: black;
+    margin-right: 1rem;
+}
+
+.facebook img { 
+    width: 55px; /* Largura dos logos */
+    height: 60px; 
+    margin-left:2rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+
+}
+
+.gmail { 
+    display: flex;
+    margin-top: 20px;
+    
+
+}
+
+.gmail h1{ 
+    margin-top: 1rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.gmail img { 
+    width: 55px; /* Largura dos logos */
+    height: 60px; 
+    margin-left:2rem;
 }
