@@ -1,7 +1,104 @@
-
 * {
     margin: 0;
     padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #000000;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale (1.5);
+}
+
+body.dark .label {
+    background-color: #ffffff;
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale (1.5);
+}
+
+.label .ball {
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0);
+    transition: transform 0.15s linear;
+}
+
+body.dark .label .ball {
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0);
+    transition: transform 0.15s linear;
+}
+
+
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+
+}
+
+.fa-moon {
+    background-color: #ffffff;
+}
+
+.fa-sun {
+    color: #ffdd00;
 }
 
 a {
@@ -14,9 +111,9 @@ a:hover {
 }
 
 .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+    margin-left: 15rem;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -30,10 +127,35 @@ nav {
 }
 
 body {
-    background-color: #e1e1e1;;
+    background-color: #e1e1e1;
+    ;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
+}
+
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark .footer {
+    background-color: #000000;
+    /* Torna o fundo do footer preto */
+    color: #ffffff;
+    /* Torna o texto do footer branco */
+}
+
+body.dark .welcome {
+    color: #ffffff;
+    /* Torna o texto da div welcome branco */
+}
+
+
+
+.main-content {
+    flex: 1;
+    /* Faz o conteúdo principal crescer para ocupar o espaço disponível */
 }
 
 .nav-list {
@@ -81,10 +203,10 @@ body {
     mobile-menu li {
         margin-left: 0;
         opacity: 0;
-        
+
     }
 
-     .mobile-menu {
+    .mobile-menu {
         display: block;
     }
 }
@@ -94,28 +216,23 @@ body {
 
 }
 
-@keyframes navLinkFade { 
-    from { 
+@keyframes navLinkFade {
+    from {
         opacity: 0;
         transform: translateX(50px);
-    } to { 
+    }
+
+    to {
         opacity: 1;
         transform: translateX(0);
     }
 
 }
 
-.container_maior {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #e1e1e1;
-    padding: 1.5rem;
-    width: 100%;
-}
 
-.card_demasia { /*A ÁREA DO TITULO */
+
+.card_demasia {
+    /*A ÁREA DO TITULO */
     display: flex;
     height: 6rem;
 }
@@ -131,23 +248,38 @@ body {
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    font-family: "Raleway", sans-serif;;
-    color:rgba(0, 0, 0, 0.836);
+    font-family: "Raleway", sans-serif;
+    ;
+    color: rgba(0, 0, 0, 0.836);
+    box-shadow: #e1e1e1;
+
 }
 
-h4::after{
+
+h4::after {
     content: '';
     width: 100%;
     max-width: 600px;
     height: 1px;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.836);
     display: block;
     margin-top: 0.5rem;
 }
 
+body.dark h4::after {
+    content: '';
+    width: 100%;
+    max-width: 600px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.836);
+    display: block;
+    margin-top: 0.5rem;
+    color: #ffffff;
+}
 
 
-.cookies-msg { 
+
+.cookies-msg {
     width: 70%;
     background-color: #ffffff;
     position: fixed;
@@ -155,29 +287,31 @@ h4::after{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: none;
-    }
+}
 
-    .cookies-msg.mostrar {
-        display: block;
-        animation: slideIn 0.5s forwards;
-        
-        }
+.cookies-msg.mostrar {
+    display: block;
+    animation: slideIn 0.5s forwards;
+
+}
 
 
-.cookies-msg .cookies-txt { 
-display: flex;
+.cookies-msg .cookies-txt {
+    display: flex;
     align-items: center;
     text-align: justify;
     padding: 20px;
-} 
-.cookies-msg .cookies-btn{ 
+}
+
+.cookies-msg .cookies-btn {
     margin-left: 30px;
 
 }
-button{ 
-    background-color : #000000e3;
+
+button {
+    background-color: #000000e3;
     color: #ffffff;
     font-weight: 700;
     font-size: 15px;
@@ -186,13 +320,14 @@ button{
     cursor: pointer;
     transition: .3s;
 }
+
 button:hover {
-transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 
 
-.footer { 
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,38 +344,44 @@ transform: scale(0.95);
     margin-right: auto;
 }
 
-.footer img { 
-justify-content: center;
-align-items: center;
+.footer img {
+    justify-content: center;
+    align-items: center;
 
 }
 
-.footer-logos { 
-    display: flex; 
+.footer-logos {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Espaçamento entre os logos */
-    margin-top: 10px; /* Espaçamento acima dos logos */
-    margin-bottom: 15px; /* Espaçamento abaixo dos logos */
+    gap: 30px;
+    /* Espaçamento entre os logos */
+    margin-top: 10px;
+    /* Espaçamento acima dos logos */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo dos logos */
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.integrantes{ 
+.integrantes {
     display: flex;
     justify-content: center;
     align-items: center;
-     /* Espaçamento entre os cards */
-    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+    /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem linha em telas menores */
 }
 
-.integrantes-img{ 
+.integrantes1-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os cards */
-    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+    gap: 40px;
+    /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem linha em telas menores */
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -248,17 +389,54 @@ align-items: center;
     padding: 1.5rem;
 }
 
-.integrantes-img img{ 
-    
-    width: 250px;;
+.integrantes1-img img {
+
+    width: 250px;
+    ;
     height: 350px;
     border-radius: 10%;
-    
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra interna e externa */
-    
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Sombra interna e externa */
+
 }
 
-.integrantes-img img:hover { 
-    transform: scale(1.02); /* Aumenta a imagem ao passar o mouse */
-    transition: transform 0.3s ease; /* Animação suave */
+.integrantes1-img img:hover {
+    transform: scale(1.02);
+    /* Aumenta a imagem ao passar o mouse */
+    transition: transform 0.3s ease;
+    /* Animação suave */
+}
+
+.integrantes2-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+    /* Permite que os cards quebrem linha em telas menores */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+.integrantes2-img img {
+
+    width: 250px;
+    ;
+    height: 350px;
+    border-radius: 10%;
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Sombra interna e externa */
+
+}
+
+.integrantes2-img img:hover {
+    transform: scale(1.02);
+    /* Aumenta a imagem ao passar o mouse */
+    transition: transform 0.3s ease;
+    /* Animação suave */
 }

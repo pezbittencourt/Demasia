@@ -12,72 +12,87 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <img width="40px" height="40px;" src="Demasia_website/knifedemasia.jpg">
-            <a class="logo" href="/"> <img wight="150" height="40" src="Demasia_website/logo-demasia.png"></a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+    <div class="main-content">
+        <header>
+            <nav>
+                <img width="40px" height="40px;" src="Demasia_website/knifedemasia.jpg">
+                <a class="logo" href="/"> <img wight="150" height="40" src="Demasia_website/logo-demasia.png"></a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
 
-            </div>
+                </div>
 
-            <ul class="nav-list">
-                <li> <a href="Demasia_website/SobreAbanda.html">Sobre a banda</a> </li>
-                <li> <a href="/">Discografia</a> </li>
-                <li> <a href="/">Agenda</a> </li>
-                <li> <a href="Demasia_website/contatos.html">Contato</a> </li>
-            </ul>
-        </nav>
-    </header>
-    <section class="container_maior">
-        <div class="card_demasia">
+                <ul class="nav-list">
+                    <li> <a href="Demasia_website/SobreAbanda.html">Sobre a banda</a> </li>
+                    <li> <a href="Demasia_website/discografia.html">Discografia</a> </li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <input type="checkbox" class="checkbox" id="chk">
 
-            <div class="welcome">
-                <h4>
-                    Bem-vindo ao site oficial da Demasia!
-                </h4>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="integrantes">
-        <div class="integrantes-img">
-
-            <img width="200px" src="Demasia_website/chris.jpg">
-            <img width="200px height=450px" src="Demasia_website/heron.jpg">
-            <img width="200px height=450px" src="Demasia_website/laurent2.jpg">
-            <img width="200px height=450px" src="Demasia_website/bittencourt.jpg">
-            <img width="200px" src="Demasia_website/salerno.jpg">
-            <img width="200px" src="Demasia_website/kaza.jpg">
-
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
         </div>
 
-    </section>
 
-
-
-
-
-
-    <div class="cookies-msg" id="cookies-msg">
-        <div class="cookies-txt">
-
-            <p>Este site utiliza cookies para melhorar sua experiência como usuário. Ao continuar navegando, você
-                concorda com os termos de privacidade e uso
-                de cookies na página.</p>
-            <div id="cookies-btn">
-                <button onclick="aceito()"> Aceito</button>
-            </div>
+        <div class="welcome">
+            <h4>
+                Bem-vindo ao site oficial da Demasia!
+            </h4>
         </div>
+
+
+        <section class="integrantes">
+            <div class="integrantes1-img">
+
+                <img width="190px" src="Demasia_website/chris.jpg">
+                <img width="200px height=450px" src="Demasia_website/heron.jpg">
+                <img width="200px height=450px" src="Demasia_website/laurent2.jpg">
+                <img width="200px" src="Demasia_website/salerno.jpg">
+                <img width="200px" src="Demasia_website/kaza.jpg">
+                <img width="200px" src="Demasia_website/bittencourt.jpg">
+            </div>
+
+            
+               
+            
+
+        </section>
+
+
+
+        <div class="cookies-msg" id="cookies-msg">
+            <div class="cookies-txt">
+
+                <p>Este site utiliza cookies para melhorar sua experiência como usuário. Ao continuar navegando, você
+                    concorda com os termos de privacidade e uso
+                    de cookies na página.</p>
+                <div id="cookies-btn">
+                    <button onclick="aceito()"> Aceito</button>
+                </div>
+            </div>
+
+        </div>
+
 
     </div>
 
+    </div>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logos">
+                <div class="footer-logo-gmail">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=oficialdemasia@gmail.com" target="_blank">
+                        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Enviar e-mail"
+                            style="width:40px; height:40px;">
+                    </a>
+                </div>
                 <div class="footer-logo-sptfy">
                     <a href="https://open.spotify.com/intl-pt/artist/3Cms9jkVPXZqwX2CLA05tw?si=IOSSsSosQSC41ZuFcrCf-A">
                         <img width="100px" height="30px"
@@ -92,14 +107,17 @@
                 </div>
             </div>
             <div class="footer-text">
-                <p>&copy; 2023 Demasia. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Demasia. Todos os direitos reservados.</p>
             </div>
 
         </div>
 
     </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/998c60ef77.js crossorigin=" anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script> <!--Biblioteca Animações-->
     <script src="../sketch.js"></script>
+
 </body>
 
 </html>

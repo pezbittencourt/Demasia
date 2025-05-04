@@ -1,4 +1,12 @@
-
+const chk = document.getElementById('chk');
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+});
 
 class MobileNavBar {
     constructor(mobileMenu, navList, navLinks) {
@@ -66,12 +74,4 @@ ScrollReveal().reveal('.welcome', {
     duration: 2000,
     distance: '100%'
 });
-
-ScrollReveal().reveal('.contato', {
-    origin: 'left',
-    duration: 2000,
-    distance: '100%'
-});
- 
-
 
